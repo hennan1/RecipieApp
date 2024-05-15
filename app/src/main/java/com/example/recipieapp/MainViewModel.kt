@@ -11,6 +11,11 @@ class MainViewModel:ViewModel() {
     private val _categoriesState = mutableStateOf(recipieState())
     val categoriesState:State<recipieState> = _categoriesState
 
+    //init will run the fetch func as soon as the viewmodel is started
+    init {
+        fetchCategory()
+    }
+
     fun fetchCategory(){
         //The coroutine is the background that keeps on running while
         //suspend function does its work

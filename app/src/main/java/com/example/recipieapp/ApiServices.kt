@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 //first this line creates a link with the url provided and the converts the gson obj found their
 // to use them in kotlin
-val retroFit = Retrofit.Builder().baseUrl("www.themealdb.com/api/json/v1/1/").
+val retroFit = Retrofit.Builder().baseUrl("https:www.themealdb.com/api/json/v1/1/").
 addConverterFactory(GsonConverterFactory.create()).build()
 
 val recipieService = retroFit.create(apiService::class.java)
